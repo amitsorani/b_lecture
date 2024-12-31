@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Advertisements>
+	<ad>
+		<Imageurl>D:\6th Sem\ASP.NET\b_lecture123\demo1\Img.png</Imageurl>
+		<Keywords>teknology,c,c#</Keywords>
+		<NavigateUrl>www.google.com</NavigateUrl>
+		<AlternateText>Img.png</AlternateText>
+		<Impression>3</Impression>
+	</ad>
+</Advertisements>

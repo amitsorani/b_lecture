@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Advertisements>
+	<Ad>
+		<ImageUrl>1.jpeg</ImageUrl>
+		<Keyword>teknology,c,c#</Keyword>
+		<NavigateUrl>www.google.com/</NavigateUrl>
+		<AlternateText>Img.png</AlternateText>
+		<Impression>3</Impression>
+	</Ad>
+	<Ad>
+		<ImageUrl>2.jpeg</ImageUrl>
+		<Keyword>teknology,c,c#</Keyword>
+		<NavigateUrl>www.google.com/</NavigateUrl>
+		<AlternateText>Img.png</AlternateText>
+		<Impression>3</Impression>
+	</Ad>
+</Advertisements>
