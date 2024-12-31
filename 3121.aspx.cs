@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection.Emit;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace demo1
 {
@@ -34,7 +37,37 @@ namespace demo1
         private void DisplayImage()
         {
             // Set the image URL to the Image control
-            Image1.ImageUrl = imageUrls[currentIndex];
+            Image1.ImageUrl = ResolveUrl("~/Images/" + imageUrls[currentIndex]);
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (FileUpload1.HasFile)
+            {
+                try
+                {
+                    string filename = FileUpload1.FileName;
+                    string folderPath = Server.MapPath("~/FILES/");
+
+                    // Ensure the directory exists
+                    if (!Directory.Exists(folderPath))
+                    {
+                        Directory.CreateDirectory(folderPath);
+                    }
+
+                    string filePath = Path.Combine(folderPath, filename);
+                    FileUpload1.SaveAs(filePath);
+                    Label1.Text = "File uploaded successfully.";
+                }
+                catch (Exception ex)
+                {
+                    Label1.Text = "Error: " + ex.Message;
+                }
+            }
+            else
+            {
+                Label1.Text = "Please select a file to upload.";
+            }
         }
     }
 }
