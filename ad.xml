@@ -5,13 +5,20 @@
 		<Keyword>teknology,c,c#</Keyword>
 		<NavigateUrl>www.google.com/</NavigateUrl>
 		<AlternateText>Img.png</AlternateText>
-		<Impression>3</Impression>
+		<Impression>1</Impression>
 	</Ad>
 	<Ad>
 		<ImageUrl>2.jpeg</ImageUrl>
 		<Keyword>teknology,c,c#</Keyword>
 		<NavigateUrl>www.google.com/</NavigateUrl>
 		<AlternateText>Img.png</AlternateText>
-		<Impression>3</Impression>
+		<Impression>1</Impression>
+	</Ad>
+	<Ad>
+		<ImageUrl>3.png</ImageUrl>
+		<Keyword>teknology,c,c#</Keyword>
+		<NavigateUrl>www.google.com/</NavigateUrl>
+		<AlternateText>Img.png</AlternateText>
+		<Impression>1</Impression>
 	</Ad>
 </Advertisements>
