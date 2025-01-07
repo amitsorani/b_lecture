@@ -42,32 +42,32 @@ namespace demo1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (FileUpload1.HasFile)
-            {
-                try
-                {
-                    string filename = FileUpload1.FileName;
-                    string folderPath = Server.MapPath("~/FILES/");
+            //if (FileUpload1.HasFile)
+            //{
+            //    try
+            //    {
+            //        string filename = FileUpload1.FileName;
+            //        string folderPath = Server.MapPath("~/FILES/");
 
-                    // Ensure the directory exists
-                    if (!Directory.Exists(folderPath))
-                    {
-                        Directory.CreateDirectory(folderPath);
-                    }
+            //        // Ensure the directory exists
+            //        if (!Directory.Exists(folderPath))
+            //        {
+            //            Directory.CreateDirectory(folderPath);
+            //        }
 
-                    string filePath = Path.Combine(folderPath, filename);
-                    FileUpload1.SaveAs(filePath);
-                    Label1.Text = "File uploaded successfully.";
-                }
-                catch (Exception ex)
-                {
-                    Label1.Text = "Error: " + ex.Message;
-                }
-            }
-            else
-            {
-                Label1.Text = "Please select a file to upload.";
-            }
+            //        string filePath = Path.Combine(folderPath, filename);
+            //        FileUpload1.SaveAs(filePath);
+            //        Label1.Text = "File uploaded successfully.";
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Label1.Text = "Error: " + ex.Message;
+            //    }
+            //}
+            //else
+            //{
+            //    Label1.Text = "Please select a file to upload.";
+            //}
         }
     }
 }
