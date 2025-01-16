@@ -1,21 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Advertisements>
 	<Ad>
-		<ImageUrl>1.jpeg</ImageUrl>
+		<ImageUrl>~/IMG/1.jpeg</ImageUrl>
 		<Keyword>technology,c,c#</Keyword>
 		<NavigateUrl>https://www.google.com/</NavigateUrl>
 		<AlternateText>Image 1</AlternateText>
 		<Impression>1</Impression>
 	</Ad>
 	<Ad>
-		<ImageUrl>2.jpeg</ImageUrl>
+		<ImageUrl>~/IMG/2.jpeg</ImageUrl>
 		<Keyword>technology,c,c#</Keyword>
 		<NavigateUrl>https://www.google.com/</NavigateUrl>
 		<AlternateText>Image 2</AlternateText>
 		<Impression>1</Impression>
 	</Ad>
 	<Ad>
-		<ImageUrl>3.png</ImageUrl>
+		<ImageUrl>~/IMG/3.png</ImageUrl>
 		<Keyword>technology,c,c#</Keyword>
 		<NavigateUrl>https://www.google.com/</NavigateUrl>
 		<AlternateText>Image 3</AlternateText>

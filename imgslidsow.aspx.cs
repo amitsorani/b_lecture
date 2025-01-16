@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection.Emit;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -22,52 +21,70 @@ namespace demo1
         {
             if (!IsPostBack)
             {
-                // Initialize the image on first load
                 DisplayImage();
             }
         }
 
         protected void Timer1_Tick(object sender, EventArgs e)
         {
-            // Change the image every 2 seconds
             currentIndex = (currentIndex + 1) % imageUrls.Count;
             DisplayImage();
         }
 
         private void DisplayImage()
         {
-            // Set the image URL to the Image control
-            Image1.ImageUrl = ResolveUrl("~/Images/" + imageUrls[currentIndex]);
+            string imagePath = Server.MapPath("~/IMG/1.jpeg" + imageUrls[currentIndex]);
+
+            if (File.Exists(imagePath))
+            {
+                Image1.ImageUrl = ResolveUrl("~/IMG/2.jpeg" + imageUrls[currentIndex]);
+            }
+            else
+            {
+                Image1.ImageUrl = ResolveUrl("~/IMG/3.png"); // Fallback image
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            //if (FileUpload1.HasFile)
-            //{
-            //    try
+            //    if (FileUpload1.HasFile)
             //    {
-            //        string filename = FileUpload1.FileName;
-            //        string folderPath = Server.MapPath("~/FILES/");
-
-            //        // Ensure the directory exists
-            //        if (!Directory.Exists(folderPath))
+            //        try
             //        {
-            //            Directory.CreateDirectory(folderPath);
-            //        }
+            //            string filename = Path.GetFileName(FileUpload1.FileName);
+            //            string filePath = Server.MapPath("~/IMG/1.jpeg") + filename;
 
-            //        string filePath = Path.Combine(folderPath, filename);
-            //        FileUpload1.SaveAs(filePath);
-            //        Label1.Text = "File uploaded successfully.";
+            //            // Ensure the directory exists
+            //            if (!Directory.Exists(Server.MapPath("~/IMG/2.jpeg")))
+            //            {
+            //                Directory.CreateDirectory(Server.MapPath("~/IMG/3.png"));
+            //            }
+
+            //            // Save the uploaded file in the IMG folder
+            //            FileUpload1.SaveAs(filePath);
+
+            //            // Add the file name to the imageUrls list if it's an image
+            //            if (filename.EndsWith("1.jpeg", StringComparison.OrdinalIgnoreCase) ||
+            //                filename.EndsWith("2.jpeg", StringComparison.OrdinalIgnoreCase) ||
+            //                filename.EndsWith("3.png", StringComparison.OrdinalIgnoreCase))
+            //            {
+            //                imageUrls.Add(filename);
+            //                Label1.Text = "File uploaded successfully and added to slideshow!";
+            //            }
+            //            else
+            //            {
+            //                Label1.Text = "File uploaded successfully, but it's not an image.";
+            //            }
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            Label1.Text = "Error: " + ex.Message;
+            //        }
             //    }
-            //    catch (Exception ex)
+            //    else
             //    {
-            //        Label1.Text = "Error: " + ex.Message;
+            //        Label1.Text = "Please select a file to upload.";
             //    }
-            //}
-            //else
-            //{
-            //    Label1.Text = "Please select a file to upload.";
-            //}
         }
     }
 }
